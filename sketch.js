@@ -8,7 +8,7 @@ let wordArray1 = ["acél", "pina", "gaga", "csók", "faló", "zsófi", "lőcs", 
 let wordArray2 = ["abor tusz", "halo kmeg", "nagy árpi", "ütve kúró", "sört ide!", "basz hato", "jézu sél!", "gyur csány",
 "négy húsz", "ruff zsófi", "lafi esta", "kasza tibi", "kati béla", "burg king", "jáno spál", "ibbi gang", "mr.b usta", 
 "addi kció", "manó rudi", "elkú rtuk", "basz ógép", "gyur csány", "addi kcio", "mr.b usta", "burg king", "basz ógép", 
-"bört önőr", "kábó tide", "adjc igit", "bizt osúr", "gang bang", "pina gyár", "love hate"];
+"bört önőr", "kábó tide", "adjc igit", "bizt osúr", "gang bang", "pina gyár", "love hate", "bánk itó!"];
 
 let randomWord = "";
 
