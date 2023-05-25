@@ -3,12 +3,14 @@ let wordArray1 = ["acél", "pina", "gaga", "csók", "faló", "zsófi", "lőcs", 
 "acél", "kábo", "mell", "répa", "anál", "acél", "bika", "csöcs", "cumi", "drog", "acél", "fasz", "pénz", 
 "szex", "nyelő", "acél", "didi", "love", "hulk", "izom", "acél", "fing", "pink", "túró", "szopó", "nagy", 
 "szar", "kópé", "baby", "szopó", "nagy", "kaka", "edda", "röfi", "lady", "segg", "géza", "ideg", "csöcs", 
-"szag", "xddd", "zsír", "olaj", "basz", "suna", "szaft", "matu"];
+"szag", "xddd", "zsír", "olaj", "basz", "suna", "szaft", "matu", "sára", "töki", "töki","dákó","dákó","kuri",
+"mszp","rizz","rizz","zaza","zaza","slay"];
 
 let wordArray2 = ["abor tusz", "halo kmeg", "nagy árpi", "ütve kúró", "sört ide!", "basz hato", "jézu sél!", "gyur csány",
 "négy húsz", "ruff zsófi", "lafi esta", "kasza tibi", "kati béla", "burg king", "jáno spál", "ibbi gang", "mr.b usta", 
 "addi kció", "manó rudi", "elkú rtuk", "basz ógép", "gyur csány", "addi kcio", "mr.b usta", "burg king", "basz ógép", 
-"bört önőr", "kábó tide", "adjc igit", "bizt osúr", "gang bang", "pina gyár", "love hate", "bánk itó!"];
+"bört önőr", "kábó tide", "adjc igit", "bizt osúr", "gang bang", "pina gyár", "love hate", "bánk itó!","albé rlet",
+"club mate","kari geri"];
 
 let randomWord = "";
 
