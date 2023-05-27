@@ -1,15 +1,15 @@
-let wordArray1 = ["acél", "pina", "gaga", "csók", "faló", "zsófi", "lőcs", "puszi", "faló", "acél", "peti", 
-"ondó", "vega", "ideg", "acél", "peti", "geci", "pita", "izom", "acél", "xddd", "cici", "husi", "nyál", 
-"acél", "kábo", "mell", "répa", "anál", "acél", "bika", "csöcs", "cumi", "drog", "acél", "fasz", "pénz", 
-"szex", "nyelő", "acél", "didi", "love", "hulk", "izom", "acél", "fing", "pink", "túró", "szopó", "nagy", 
+let wordArray1 = ["kula", "pina", "gaga", "csók", "faló", "zsófi", "lőcs", "puszi", "faló", "szex", "peti", 
+"ondó", "vega", "ideg", "kuki", "peti", "geci", "pita", "izom", "nedv", "xddd", "cici", "husi", "nyál", 
+"ortó", "kábó", "mell", "répa", "anál", "acél", "bika", "csöcs", "cumi", "drog", "acél", "fasz", "pénz", 
+"szex", "nyelő", "nyál", "didi", "love", "hulk", "izom", "acél", "fing", "pink", "túró", "szopó", "nagy", 
 "szar", "kópé", "baby", "szopó", "nagy", "kaka", "edda", "röfi", "lady", "segg", "géza", "ideg", "csöcs", 
 "szag", "xddd", "zsír", "olaj", "basz", "suna", "szaft", "matu", "sára", "töki", "töki","dákó","dákó","kuri",
 "mszp","rizz","rizz","zaza","zaza","slay","mini","kóla","dzsú","cigi","heni","büfé","boci","manó","jizz","mome",
-"metu","szte","bruh","bánk"];
+"metu","szte","bruh","bánk","acél","pisi","pöcs","suna"];
 
 let wordArray2 = ["abor tusz", "halo kmeg", "nagy árpi", "ütve kúró", "sört ide!", "basz ható", "jézu sél!", "gyur csány",
 "négy húsz", "ruff zsófi", "lafi esta", "kasza tibi", "kati béla", "burg king", "jáno spál", "ibbi gang", "mr.b usta", 
-"addi kció", "manó rudi", "elkú rtuk", "basz ógép", "gyur csány", "addi kcio", "mr.b usta", "burg king", "basz ógép", 
+"addi kció", "manó rudi", "elkú rtuk", "basz ógép", "atei zmus", "addi kcio", "flex elés", "burg king", 
 "bört önőr", "kábó tide", "adjc igit", "bizt osúr", "gang bang", "pina gyár", "love hate", "bánk itó!","albé rlet",
 "club mate","kari geri","hell nahh"];
 
