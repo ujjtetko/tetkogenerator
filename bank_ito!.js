@@ -13,6 +13,8 @@ let wordArray2 = ["abor tusz", "halo kmeg", "nagy árpi", "ütve kúró", "sört
 "bört önőr", "kábó tide", "adjc igit", "bizt osúr", "gang bang", "pina gyár", "love hate", "bánk itó!","albé rlet",
 "club mate","kari geri","hell nahh"];
 
+document.title = 'bánk itó!'; 
+
 let randomWord = "";
 
 function setup() {
@@ -45,7 +47,7 @@ function draw() {
 function generateRandomWord() {
   let chance = random(1);
   
-  if (chance < 0.2) {
+  if (chance < 0.15) {
     randomWord = random(wordArray2);
   } else {
     let word1 = random(wordArray1);
