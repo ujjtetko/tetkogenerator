@@ -4,8 +4,8 @@ let wordArray1 = ["kula", "pina", "gaga", "csók", "faló", "zsófi", "lőcs", "
 "szex", "nyelő", "nyál", "didi", "love", "hulk", "izom", "acél", "fing", "pink", "túró", "szopó", "nagy", 
 "szar", "kópé", "baby", "szopó", "nagy", "kaka", "edda", "röfi", "lady", "segg", "géza", "ideg", "csöcs", 
 "szag", "xddd", "zsír", "olaj", "basz", "suna", "szaft", "matu", "sára", "töki", "töki","dákó","dákó","kuri",
-"mszp","rizz","rizz","zaza","zaza","slay","mini","kóla","dzsú","cigi","heni","büfé","boci","manó","jizz","mome",
-"metu","szte","bruh","bánk","acél","pisi","pöcs","suna"];
+"rizz","rizz","zaza","zaza","slay","mini","kóla","cigi","heni","büfé","boci","manó","jizz","mome",
+"metu","bruh","bánk","acél","pisi","pöcs","suna"];
 
 let wordArray2 = ["abor tusz", "halo kmeg", "nagy árpi", "ütve kúró", "sört ide!", "basz ható", "jézu sél!", "gyur csány",
 "négy húsz", "ruff zsófi", "lafi esta", "kasza tibi", "kati béla", "burg king", "jáno spál", "ibbi gang", "mr.b usta", 
