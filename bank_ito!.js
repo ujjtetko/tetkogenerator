@@ -17,12 +17,16 @@ document.title = 'bánk itó!';
 
 let randomWord = "";
 
+let displayText = "";
+
+let button;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
   textSize(50);
   
-  let button = createButton('nyomod fasz');
+  button = createButton('nyomod fasz');
   button.style('background-color', '#FF5757');
   button.style('border', 'none');
   button.style('color', 'white');
@@ -41,10 +45,12 @@ function draw() {
   background(0);
   fill(255);
   textAlign(CENTER, CENTER);
-  text(randomWord, windowWidth / 2, windowHeight / 2 - 50);
+  text(displayText, windowWidth / 2, windowHeight / 2 - 50);
 }
 
+
 function generateRandomWord() {
+  button.attribute('disabled', '');
   let chance = random(1);
   
   if (chance < 0.15) {
@@ -55,4 +61,21 @@ function generateRandomWord() {
   
     randomWord = word1 + " " + word2;
   }
+  
+  // Clear the currently displayed text
+  displayText = "";
+  
+  // Start a new interval timer that will add one character from randomWord to displayText every 100 milliseconds
+  let index = 0;
+  let intervalId = setInterval(function() {
+    if (index < randomWord.length) {
+      displayText += randomWord[index];
+      index++;
+    } else {
+      // Stop the interval timer once the entire word has been displayed
+      clearInterval(intervalId);
+      button.removeAttribute('disabled'); // enable the button
+    }
+  }, 65);
 }
+
