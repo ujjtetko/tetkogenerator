@@ -3,15 +3,15 @@ let wordArray1 = ["kula", "pina", "gaga", "csók", "faló", "zsófi", "lőcs", "
 "ortó", "kábó", "mell", "répa", "anál", "acél", "bika", "csöcs", "cumi", "drog", "acél", "fasz", "pénz", 
 "szex", "nyelő", "nyál", "didi", "love", "hulk", "izom", "acél", "fing", "pink", "túró", "szopó", "nagy", 
 "szar", "kópé", "baby", "szopó", "nagy", "kaka", "edda", "röfi", "lady", "segg", "géza", "ideg", "csöcs", 
-"szag", "xddd", "zsír", "olaj", "basz", "suna", "szaft", "matu", "sára", "töki", "töki","dákó","dákó","kuri",
-"rizz","rizz","zaza","zaza","slay","mini","kóla","cigi","heni","büfé","boci","manó","jizz","mome",
-"metu","bruh","bánk","acél","pisi","pöcs","suna"];
+"szag", "xddd", "zsír", "olaj", "basz", "suna", "szaft", "matu", "sára", "töki", "töki","dákó","dákó",
+"rizz","rizz","zaza","zaza","slay","mini","kóla","cigi","heni","büfé","boci","manó","jizz","mome","popó",
+"metu","bruh","bánk","acél","pisi","pöcs","suna","bíró","span","cica","maci","latyó","csár","pici","puki"];
 
 let wordArray2 = ["abor tusz", "halo kmeg", "nagy árpi", "ütve kúró", "sört ide!", "basz ható", "jézu sél!", "gyur csány",
 "négy húsz", "ruff zsófi", "lafi esta", "kasza tibi", "kati béla", "burg king", "jáno spál", "ibbi gang", "mr.b usta", 
 "addi kció", "manó rudi", "elkú rtuk", "basz ógép", "atei zmus", "addi kció", "flex elés", "burg king", 
 "bört önőr", "kábó tide", "adjc igit", "bizt osúr", "gang bang", "pina gyár", "love hate", "bánk itó!","albé rlet",
-"club mate","kari geri","hell nahh"];
+"club mate","kari geri","hell nahh","bíró zsófi","latyó haze"];
 
 document.title = 'bánk itó!'; 
 
@@ -22,11 +22,14 @@ let displayText = "";
 let button;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  const canvas = createCanvas(windowWidth, windowHeight);
   background(0);
   textSize(50);
   
-  button = createButton('nyomod fasz');
+  canvas.parent('canvas-wrapper'); // Append the canvas to #canvas-wrapper
+
+  button = select('#word-button'); // Select the existing button
+  button.mousePressed(generateRandomWord);
   button.style('background-color', '#FF5757');
   button.style('border', 'none');
   button.style('color', 'white');
@@ -37,10 +40,9 @@ function setup() {
   button.style('display', 'inline-block');
   button.style('margin', '4px 2px');
   button.style('cursor', 'pointer');
-  button.position((windowWidth / 2) - 100.4, windowHeight / 2);
-  button.mousePressed(generateRandomWord);
 }
 
+// In draw function:
 function draw() {
   background(0);
   fill(255);
@@ -48,8 +50,10 @@ function draw() {
   text(displayText, windowWidth / 2, windowHeight / 2 - 50);
 }
 
-
 function generateRandomWord() {
+  // Load a new cat image
+  loadCatImage();
+
   button.attribute('disabled', '');
   let chance = random(1);
   
@@ -79,3 +83,13 @@ function generateRandomWord() {
   }, 65);
 }
 
+function loadCatImage() {
+  // Load left and right cat image
+  let url = "https://api.thecatapi.com/v1/images/search?limit=1";
+
+  httpGet(url, 'json', false, function(response) {
+    // The response is an array of objects, we just want the first two objects
+    document.getElementById("cat-image").src = response[0].url;
+    
+  });
+}
