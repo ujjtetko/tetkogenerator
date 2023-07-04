@@ -9,7 +9,7 @@ let wordArray1 = ["kula", "pina", "gaga", "csók", "faló", "zsófi", "lőcs", "
 
 let wordArray2 = ["abor tusz", "halo kmeg", "nagy árpi", "ütve kúró", "sört ide!", "basz ható", "jézu sél!", "gyur csány",
 "négy húsz", "ruff zsófi", "lafi esta", "kasza tibi", "kati béla", "burg king", "jáno spál", "ibbi gang", "mr.b usta", 
-"addi kció", "manó rudi", "elkú rtuk", "basz ógép", "atei zmus", "addi kcio", "flex elés", "burg king", 
+"addi kció", "manó rudi", "elkú rtuk", "basz ógép", "atei zmus", "addi kció", "flex elés", "burg king", 
 "bört önőr", "kábó tide", "adjc igit", "bizt osúr", "gang bang", "pina gyár", "love hate", "bánk itó!","albé rlet",
 "club mate","kari geri","hell nahh"];
 
