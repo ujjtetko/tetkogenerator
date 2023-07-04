@@ -5,7 +5,7 @@ let wordArray1 = ["kula", "pina", "gaga", "csók", "faló", "zsófi", "lőcs", "
 "szar", "kópé", "baby", "szopó", "nagy", "kaka", "edda", "röfi", "lady", "segg", "géza", "ideg", "csöcs", 
 "szag", "xddd", "zsír", "olaj", "basz", "suna", "szaft", "matu", "sára", "töki", "töki","dákó","dákó",
 "rizz","rizz","zaza","zaza","slay","mini","kóla","cigi","heni","büfé","boci","manó","jizz","mome","popó",
-"metu","bruh","bánk","acél","pisi","pöcs","suna","bíró","span","cica","maci","latyó","csár","pici","puki"];
+"metu","bruh","bánk","acél","pisi","pöcs","suna","bíró","span","cica","cica","maci","latyó","csár","pici","puki"];
 
 let wordArray2 = ["abor tusz", "halo kmeg", "nagy árpi", "ütve kúró", "sört ide!", "basz ható", "jézu sél!", "gyur csány",
 "négy húsz", "ruff zsófi", "lafi esta", "kasza tibi", "kati béla", "burg king", "jáno spál", "ibbi gang", "mr.b usta", 
@@ -47,7 +47,7 @@ function draw() {
   background(0);
   fill(255);
   textAlign(CENTER, CENTER);
-  text(displayText, windowWidth / 2, windowHeight / 2 - 50);
+  text(displayText, windowWidth / 2, windowHeight / 2);
 }
 
 function generateRandomWord() {
