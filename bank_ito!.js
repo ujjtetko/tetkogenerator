@@ -27,7 +27,7 @@ let switchButton;
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight);
   background(0);
-  textSize(50);
+  textSize(windowWidth * 0.04);
   
   canvas.parent('canvas-wrapper'); // Append the canvas to #canvas-wrapper
 
@@ -41,13 +41,13 @@ function setup() {
   button.style('text-align', 'center');
   button.style('text-decoration', 'none');
   button.style('display', 'inline-block');
-  button.style('margin', '70px 2px');
+  button.style('margin', '120px 2px');
   button.style('cursor', 'pointer');
 
   switchButton = select('#switch-word-button'); // Select the new button
   switchButton.mousePressed(switchWordOrder);
   // styling for the new button
-  switchButton.style('margin', '-70px 2px'); // adjust the top/bottom margin as needed
+  switchButton.style('margin', '-100px 2px'); // adjust the top/bottom margin as needed
   switchButton.style('background', 'transparent'); // make the button background transparent
   switchButton.style('border', 'none'); // remove the border of the button
   switchButton.style('cursor', 'pointer');

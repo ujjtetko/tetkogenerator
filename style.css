@@ -31,6 +31,7 @@ html, body {
   height: 300px;
   object-fit: cover;
   transform: translate(-50%, 0);
+  max-width: 90vw;
 }
 
 #button-wrapper {
@@ -44,6 +45,7 @@ html, body {
 }
 
 #switch-word-button img {
-  height: 100px; /* Adjust as needed */
-  width: 50px;  /* Adjust as needed */
+  width: 3vw;  /* Adjust as needed - vw is relative to the viewport width */
+  height: auto; /* This will maintain the aspect ratio of the image */
 }
+
