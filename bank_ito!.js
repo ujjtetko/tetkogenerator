@@ -18,60 +18,18 @@ document.title = 'bánk itó!';
 
 let randomWord = "";
 
-let displayText = "";
-
 let button;
 let switchButton;
 
-
 function setup() {
-  const canvas = createCanvas(windowWidth, windowHeight);
-  background(0);
-  textSize(windowWidth * 0.04);
-  
-  canvas.parent('canvas-wrapper'); // Append the canvas to #canvas-wrapper
-
   button = select('#word-button'); // Select the existing button
   button.mousePressed(generateRandomWord);
-  button.style('background-color', '#FF5757');
-  button.style('border', 'none');
-  button.style('color', 'white');
-  button.style('font-size', '24px');
-  button.style('padding', '15px 32px');
-  button.style('text-align', 'center');
-  button.style('text-decoration', 'none');
-  button.style('display', 'inline-block');
-  button.style('margin', '-20px 2px');
-  button.style('cursor', 'pointer');
 
   switchButton = select('#switch-word-button'); // Select the new button
   switchButton.mousePressed(switchWordOrder);
-  // styling for the new button
-
-  switchButton.style('border', 'none');
-  switchButton.style('color', 'black');
-  switchButton.style('font-size', '10px');
-
-  switchButton.style('text-align', 'center');
-  switchButton.style('text-decoration', 'none');
-  switchButton.style('display', 'inline-block');
-  switchButton.style('margin', '-40px ');
-  switchButton.style('cursor', 'pointer');
+  switchButton.style('background', 'transparent'); // make the button background transparent
+  switchButton.style('border', 'none'); // remove the border of the button
 }
-
-// In draw function:
-function draw() {
-  background(0);
-  fill(255);
-  textAlign(CENTER, CENTER);
-  text(displayText, windowWidth / 2, windowHeight / 2);
-}
-
-function switchWordOrder() {
-  // Split the displayText into words, reverse the array, and join it back together
-  displayText = displayText.split(" ").reverse().join(" ");
-}
-
 
 function generateRandomWord() {
   // Load a new cat image
@@ -86,18 +44,18 @@ function generateRandomWord() {
   } else {
     let word1 = random(wordArray1);
     let word2 = random(wordArray1);
-  
     randomWord = word1 + " " + word2;
   }
   
   // Clear the currently displayed text
-  displayText = "";
+  let textElement = select('#generated-text');
+  textElement.html("");
   
-  // Start a new interval timer that will add one character from randomWord to displayText every 100 milliseconds
+  // Start a new interval timer that will add one character from randomWord to the HTML element every 100 milliseconds
   let index = 0;
   let intervalId = setInterval(function() {
     if (index < randomWord.length) {
-      displayText += randomWord[index];
+      textElement.html(textElement.html() + randomWord[index]);
       index++;
     } else {
       // Stop the interval timer once the entire word has been displayed
@@ -108,13 +66,19 @@ function generateRandomWord() {
   }, 65);
 }
 
+function switchWordOrder() {
+  // Split the displayText into words, reverse the array, and join it back together
+  let textElement = select('#generated-text');
+  let newText = textElement.html().split(" ").reverse().join(" ");
+  textElement.html(newText);
+}
+
 function loadCatImage() {
   // Load left and right cat image
   let url = "https://api.thecatapi.com/v1/images/search?limit=1";
 
   httpGet(url, 'json', false, function(response) {
-    // The response is an array of objects, we just want the first two objects
+    // object
     document.getElementById("cat-image").src = response[0].url;
-    
   });
 }
