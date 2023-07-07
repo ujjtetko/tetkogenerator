@@ -24,7 +24,7 @@ html, body {
 
 #generated-text {
   color: white;
-  font-size: 50px;
+  font-size: 80px;
   text-align: center;
   font-family: Arial;
 }
@@ -36,7 +36,7 @@ html, body {
 }
 
 #word-button, #switch-word-button {
-  margin-top: 2%;
+  margin-top: 0%;
   background-color: #FF5757;
   border: none;
   color: white;
@@ -45,11 +45,11 @@ html, body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 2px;
+  margin: 0px;
   cursor: pointer;
 }
 
 #switch-word-button img {
-  width: 3vw;
+  width: 5vw;
   height: auto;
 }
