@@ -1,6 +1,6 @@
 let wordArray1 = ["kula", "pina", "gaga", "csók", "faló", "zsófi", "lőcs", "puszi", "faló", "szex", "peti", 
 "ondó", "vega", "ideg", "kuki", "peti", "geci", "pita", "izom", "nedv", "xddd", "cici", "husi", "nyál", 
-"ortó", "kábó", "mell", "répa", "anál", "acél", "bika", "csöcs", "cumi", "drog", "acél", "fasz", "pénz", 
+"ortó", "kábó", "mell", "répa", "anál","bika", "csöcs", "cumi", "drog", "acél", "fasz", "pénz", 
 "szex", "nyelő", "nyál", "didi", "love", "hulk", "izom", "acél", "fing", "pink", "túró", "szopó", "nagy", 
 "szar", "kópé", "baby", "szopó", "nagy", "kaka", "edda", "röfi", "lady", "segg", "géza", "ideg", "csöcs", 
 "szag", "xddd", "zsír", "olaj", "basz", "suna", "szaft", "matu", "sára", "töki", "töki","dákó","dákó",
@@ -11,7 +11,8 @@ let wordArray2 = ["abor tusz", "halo kmeg", "nagy árpi", "ütve kúró", "sört
 "négy húsz", "ruff zsófi", "lafi esta", "kasza tibi", "kati béla", "burg king", "jáno spál", "ibbi gang", "mr.b usta", 
 "addi kció", "manó rudi", "elkú rtuk", "basz ógép", "atei zmus", "addi kció", "flex elés", "burg king", 
 "bört önőr", "kábó tide", "adjc igit", "bizt osúr", "gang bang", "pina gyár", "love hate", "bánk itó!","albé rlet",
-"club mate","kari geri","hell nahh","bíró zsófi","latyó haze","poci éhes","subi dubi"];
+"club mate","kari geri","hell nahh","bíró zsófi","latyó haze","poci éhes","subi dubi","drsz ex69","muki úr69","sara cica",
+"frad ista"];
 
 document.title = 'bánk itó!'; 
 
@@ -20,6 +21,8 @@ let randomWord = "";
 let displayText = "";
 
 let button;
+let switchButton;
+
 
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight);
@@ -38,8 +41,16 @@ function setup() {
   button.style('text-align', 'center');
   button.style('text-decoration', 'none');
   button.style('display', 'inline-block');
-  button.style('margin', '4px 2px');
+  button.style('margin', '70px 2px');
   button.style('cursor', 'pointer');
+
+  switchButton = select('#switch-word-button'); // Select the new button
+  switchButton.mousePressed(switchWordOrder);
+  // styling for the new button
+  switchButton.style('margin', '-70px 2px'); // adjust the top/bottom margin as needed
+  switchButton.style('background', 'transparent'); // make the button background transparent
+  switchButton.style('border', 'none'); // remove the border of the button
+  switchButton.style('cursor', 'pointer');
 }
 
 // In draw function:
@@ -50,10 +61,17 @@ function draw() {
   text(displayText, windowWidth / 2, windowHeight / 2);
 }
 
+function switchWordOrder() {
+  // Split the displayText into words, reverse the array, and join it back together
+  displayText = displayText.split(" ").reverse().join(" ");
+}
+
+
 function generateRandomWord() {
   // Load a new cat image
   loadCatImage();
 
+  switchButton.attribute('disabled', ''); // disable the new button
   button.attribute('disabled', '');
   let chance = random(1);
   
@@ -79,6 +97,7 @@ function generateRandomWord() {
       // Stop the interval timer once the entire word has been displayed
       clearInterval(intervalId);
       button.removeAttribute('disabled'); // enable the button
+      switchButton.removeAttribute('disabled');
     }
   }, 65);
 }
