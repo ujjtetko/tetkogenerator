@@ -5,51 +5,37 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
 }
 
 #content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  position: relative;
+  width: 100%;
   height: 100%;
 }
 
+#canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px; /* Add padding to the top */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  background-color: black; /* Add black background */
+}
+
+
 .cat-image {
+  position: absolute;
+  top: 70px;
+  left: 50%;
   width: 300px;
   height: 300px;
   object-fit: cover;
-}
-
-#generated-text {
-  color: white;
-  font-size: 80px;
-  text-align: center;
-  font-family: Arial;
+  transform: translate(-50%, 0);
 }
 
 #button-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#word-button, #switch-word-button {
-  margin-top: 0%;
-  background-color: #FF5757;
-  border: none;
-  color: white;
-  font-size: 24px;
-  padding: 15px 32px;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 0px;
-  cursor: pointer;
-}
-
-#switch-word-button img {
-  width: 5vw;
-  height: auto;
 }
