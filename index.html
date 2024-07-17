@@ -57,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/GitTest.loader.js";
+      var loaderUrl = buildUrl + "/tetkogenerator.loader.js";
       var config = {
-        dataUrl: buildUrl + "/GitTest.data.unityweb",
-        frameworkUrl: buildUrl + "/GitTest.framework.js.unityweb",
-        codeUrl: buildUrl + "/GitTest.wasm.unityweb",
+        dataUrl: buildUrl + "/tetkogenerator.data",
+        frameworkUrl: buildUrl + "/tetkogenerator.framework.js",
+        codeUrl: buildUrl + "/tetkogenerator.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "fppm",
         productName: "ujjtetko",
@@ -98,7 +98,7 @@
         canvas.style.height = "960px";
       }
 
-      canvas.style.background = "url('" + buildUrl + "/GitTest.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/tetkogenerator.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
